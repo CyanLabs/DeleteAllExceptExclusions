@@ -29,7 +29,7 @@ namespace DeleteAllExceptList
         {
             DirectoryInfo d = new(path.Text);
             foreach (FileInfo fi in d.GetFiles())
-                if (!exclusions.Text.Contains(fi.FullName)) File.Delete(fi.FullName);
+                if (!exclusions.Text.Contains(fi.FullName.Replace(path.Text + "\\", ""))) { File.Delete(fi.FullName);}
         }
     }
 }

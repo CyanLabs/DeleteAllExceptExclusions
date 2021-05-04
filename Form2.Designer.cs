@@ -69,7 +69,6 @@ namespace DeleteAllExceptList
             this.lstToDelete.TabIndex = 2;
             this.lstToDelete.UseCompatibleStateImageBehavior = false;
             this.lstToDelete.View = System.Windows.Forms.View.Details;
-            this.lstToDelete.SelectedIndexChanged += new System.EventHandler(this.lstToDelete_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -178,7 +177,7 @@ namespace DeleteAllExceptList
             this.Name = "Form2";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Delete All Except List";
+            this.Text = "Delete All Files Except Exclusions!";
             this.ResumeLayout(false);
             this.PerformLayout();
         }

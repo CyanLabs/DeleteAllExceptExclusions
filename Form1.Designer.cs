@@ -29,48 +29,37 @@ namespace DeleteAllExceptList
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDry = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnPreview = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.path = new System.Windows.Forms.TextBox();
+            this.txtPath = new System.Windows.Forms.TextBox();
             this.btnBrowse = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.exclusions = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPath = new System.Windows.Forms.Label();
+            this.txtExclusions = new System.Windows.Forms.TextBox();
+            this.lblExclusions = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnDry
+            // btnPreview
             // 
-            this.btnDry.Location = new System.Drawing.Point(253, 242);
-            this.btnDry.Name = "btnDry";
-            this.btnDry.Size = new System.Drawing.Size(73, 29);
-            this.btnDry.TabIndex = 0;
-            this.btnDry.Text = "Dry Run";
-            this.btnDry.UseVisualStyleBackColor = true;
-            this.btnDry.Click += new System.EventHandler(this.BtnDryClick);
+            this.btnPreview.Enabled = false;
+            this.btnPreview.Location = new System.Drawing.Point(499, 318);
+            this.btnPreview.Name = "btnPreview";
+            this.btnPreview.Size = new System.Drawing.Size(73, 29);
+            this.btnPreview.TabIndex = 0;
+            this.btnPreview.Text = "&Preview";
+            this.btnPreview.UseVisualStyleBackColor = true;
+            this.btnPreview.Click += new System.EventHandler(this.BtnDryClick);
             // 
-            // btnDelete
+            // txtPath
             // 
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(332, 242);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(70, 29);
-            this.btnDelete.TabIndex = 1;
-            this.btnDelete.Text = "DELETE!";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.BtnDeleteClick);
-            // 
-            // path
-            // 
-            this.path.Location = new System.Drawing.Point(51, 18);
-            this.path.Name = "path";
-            this.path.ReadOnly = true;
-            this.path.Size = new System.Drawing.Size(283, 20);
-            this.path.TabIndex = 2;
+            this.txtPath.Location = new System.Drawing.Point(51, 18);
+            this.txtPath.Name = "txtPath";
+            this.txtPath.ReadOnly = true;
+            this.txtPath.Size = new System.Drawing.Size(451, 20);
+            this.txtPath.TabIndex = 2;
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(338, 18);
+            this.btnBrowse.Location = new System.Drawing.Point(508, 18);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(64, 20);
             this.btnBrowse.TabIndex = 3;
@@ -78,46 +67,45 @@ namespace DeleteAllExceptList
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.BtnBrowseClick);
             // 
-            // label1
+            // lblPath
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Path: ";
+            this.lblPath.AutoSize = true;
+            this.lblPath.Location = new System.Drawing.Point(10, 22);
+            this.lblPath.Name = "lblPath";
+            this.lblPath.Size = new System.Drawing.Size(35, 13);
+            this.lblPath.TabIndex = 4;
+            this.lblPath.Text = "Path: ";
             // 
-            // exclusions
+            // txtExclusions
             // 
-            this.exclusions.Location = new System.Drawing.Point(10, 74);
-            this.exclusions.Multiline = true;
-            this.exclusions.Name = "exclusions";
-            this.exclusions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.exclusions.Size = new System.Drawing.Size(392, 164);
-            this.exclusions.TabIndex = 5;
-            this.exclusions.WordWrap = false;
+            this.txtExclusions.Location = new System.Drawing.Point(12, 74);
+            this.txtExclusions.Multiline = true;
+            this.txtExclusions.Name = "txtExclusions";
+            this.txtExclusions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtExclusions.Size = new System.Drawing.Size(560, 240);
+            this.txtExclusions.TabIndex = 5;
+            this.txtExclusions.WordWrap = false;
             // 
-            // label2
+            // lblExclusions
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Excluded files:";
+            this.lblExclusions.AutoSize = true;
+            this.lblExclusions.Location = new System.Drawing.Point(10, 58);
+            this.lblExclusions.Name = "lblExclusions";
+            this.lblExclusions.Size = new System.Drawing.Size(75, 13);
+            this.lblExclusions.TabIndex = 6;
+            this.lblExclusions.Text = "Excluded files:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 276);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.exclusions);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.lblExclusions);
+            this.Controls.Add(this.txtExclusions);
+            this.Controls.Add(this.lblPath);
             this.Controls.Add(this.btnBrowse);
-            this.Controls.Add(this.path);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnDry);
+            this.Controls.Add(this.txtPath);
+            this.Controls.Add(this.btnPreview);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -131,14 +119,13 @@ namespace DeleteAllExceptList
 
         #endregion
 
-        private System.Windows.Forms.Button btnDry;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnPreview;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.TextBox path;
+        private System.Windows.Forms.TextBox txtPath;
         private System.Windows.Forms.Button btnBrowse;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox exclusions;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPath;
+        private System.Windows.Forms.TextBox txtExclusions;
+        private System.Windows.Forms.Label lblExclusions;
     }
 }
 

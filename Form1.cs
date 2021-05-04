@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace DeleteAllExceptList
@@ -13,23 +11,15 @@ namespace DeleteAllExceptList
         }
         private void BtnBrowseClick(object sender, EventArgs e)
         {
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK) path.Text = folderBrowserDialog1.SelectedPath;
-            btnDelete.Enabled = false;
+            if (folderBrowserDialog1.ShowDialog() != DialogResult.OK) return;
+            txtPath.Text = folderBrowserDialog1.SelectedPath;
+            btnPreview.Enabled = true;
         }
 
         private void BtnDryClick(object sender, EventArgs e)
         {
-            DirectoryInfo d = new(path.Text);
-            int count = d.GetFiles().Select(fi => fi.FullName.Replace(path.Text + "\\", "")).Count(filename => !exclusions.Text.Contains(filename));
-            MessageBox.Show(count + @" files will be deleted!",@"Dry Run Results");
-            btnDelete.Enabled = true;
-        }
-
-        private void BtnDeleteClick(object sender, EventArgs e)
-        {
-            DirectoryInfo d = new(path.Text);
-            foreach (FileInfo fi in d.GetFiles())
-                if (!exclusions.Text.Contains(fi.FullName.Replace(path.Text + "\\", ""))) { File.Delete(fi.FullName);}
+            Form2 frm2 = new(txtPath.Text,txtExclusions.Text);
+            frm2.Show();
         }
     }
 }

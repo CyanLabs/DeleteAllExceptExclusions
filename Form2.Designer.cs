@@ -49,7 +49,8 @@ namespace DeleteAllExceptList
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(503, 330);
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Location = new System.Drawing.Point(403, 326);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(70, 29);
             this.btnDelete.TabIndex = 1;
@@ -59,13 +60,14 @@ namespace DeleteAllExceptList
             // 
             // lstToDelete
             // 
+            this.lstToDelete.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.lstToDelete.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {this.columnHeader1, this.columnHeader2, this.columnHeader3, this.columnHeader7});
             this.lstToDelete.FullRowSelect = true;
             this.lstToDelete.GridLines = true;
             this.lstToDelete.HideSelection = false;
             this.lstToDelete.Location = new System.Drawing.Point(11, 42);
             this.lstToDelete.Name = "lstToDelete";
-            this.lstToDelete.Size = new System.Drawing.Size(563, 124);
+            this.lstToDelete.Size = new System.Drawing.Size(463, 120);
             this.lstToDelete.TabIndex = 2;
             this.lstToDelete.UseCompatibleStateImageBehavior = false;
             this.lstToDelete.View = System.Windows.Forms.View.Details;
@@ -73,12 +75,12 @@ namespace DeleteAllExceptList
             // columnHeader1
             // 
             this.columnHeader1.Text = "Filename";
-            this.columnHeader1.Width = 350;
+            this.columnHeader1.Width = 238;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Size";
-            this.columnHeader2.Width = 100;
+            this.columnHeader2.Width = 72;
             // 
             // columnHeader3
             // 
@@ -92,13 +94,14 @@ namespace DeleteAllExceptList
             // 
             // lstToKeep
             // 
+            this.lstToKeep.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.lstToKeep.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {this.columnHeader4, this.columnHeader5, this.columnHeader6, this.columnHeader8});
             this.lstToKeep.FullRowSelect = true;
             this.lstToKeep.GridLines = true;
             this.lstToKeep.HideSelection = false;
             this.lstToKeep.Location = new System.Drawing.Point(11, 201);
             this.lstToKeep.Name = "lstToKeep";
-            this.lstToKeep.Size = new System.Drawing.Size(563, 124);
+            this.lstToKeep.Size = new System.Drawing.Size(463, 120);
             this.lstToKeep.TabIndex = 3;
             this.lstToKeep.UseCompatibleStateImageBehavior = false;
             this.lstToKeep.View = System.Windows.Forms.View.Details;
@@ -106,12 +109,12 @@ namespace DeleteAllExceptList
             // columnHeader4
             // 
             this.columnHeader4.Text = "Filename";
-            this.columnHeader4.Width = 350;
+            this.columnHeader4.Width = 238;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Size";
-            this.columnHeader5.Width = 100;
+            this.columnHeader5.Width = 74;
             // 
             // columnHeader6
             // 
@@ -134,6 +137,7 @@ namespace DeleteAllExceptList
             // 
             // lblToKeep
             // 
+            this.lblToKeep.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblToKeep.AutoSize = true;
             this.lblToKeep.Location = new System.Drawing.Point(11, 185);
             this.lblToKeep.Name = "lblToKeep";
@@ -144,7 +148,7 @@ namespace DeleteAllExceptList
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 8);
+            this.label3.Location = new System.Drawing.Point(12, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 13);
             this.label3.TabIndex = 6;
@@ -163,7 +167,7 @@ namespace DeleteAllExceptList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 365);
+            this.ClientSize = new System.Drawing.Size(484, 361);
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblToKeep);
@@ -171,7 +175,6 @@ namespace DeleteAllExceptList
             this.Controls.Add(this.lstToKeep);
             this.Controls.Add(this.lstToDelete);
             this.Controls.Add(this.btnDelete);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form2";

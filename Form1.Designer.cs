@@ -36,12 +36,14 @@ namespace DeleteAllExceptList
             this.lblPath = new System.Windows.Forms.Label();
             this.txtExclusions = new System.Windows.Forms.TextBox();
             this.lblExclusions = new System.Windows.Forms.Label();
+            this.lblCopyright = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPreview
             // 
+            this.btnPreview.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPreview.Enabled = false;
-            this.btnPreview.Location = new System.Drawing.Point(499, 318);
+            this.btnPreview.Location = new System.Drawing.Point(399, 220);
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(73, 29);
             this.btnPreview.TabIndex = 0;
@@ -51,19 +53,21 @@ namespace DeleteAllExceptList
             // 
             // txtPath
             // 
-            this.txtPath.Location = new System.Drawing.Point(51, 18);
+            this.txtPath.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPath.Location = new System.Drawing.Point(43, 19);
             this.txtPath.Name = "txtPath";
             this.txtPath.ReadOnly = true;
-            this.txtPath.Size = new System.Drawing.Size(451, 20);
+            this.txtPath.Size = new System.Drawing.Size(359, 20);
             this.txtPath.TabIndex = 2;
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(508, 18);
+            this.btnBrowse.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBrowse.Location = new System.Drawing.Point(408, 15);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(64, 20);
+            this.btnBrowse.Size = new System.Drawing.Size(64, 28);
             this.btnBrowse.TabIndex = 3;
-            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.Text = "&Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.BtnBrowseClick);
             // 
@@ -78,11 +82,12 @@ namespace DeleteAllExceptList
             // 
             // txtExclusions
             // 
+            this.txtExclusions.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtExclusions.Location = new System.Drawing.Point(12, 74);
             this.txtExclusions.Multiline = true;
             this.txtExclusions.Name = "txtExclusions";
             this.txtExclusions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtExclusions.Size = new System.Drawing.Size(560, 240);
+            this.txtExclusions.Size = new System.Drawing.Size(460, 140);
             this.txtExclusions.TabIndex = 5;
             this.txtExclusions.WordWrap = false;
             // 
@@ -95,20 +100,31 @@ namespace DeleteAllExceptList
             this.lblExclusions.TabIndex = 6;
             this.lblExclusions.Text = "Excluded files:";
             // 
+            // lblCopyright
+            // 
+            this.lblCopyright.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblCopyright.AutoSize = true;
+            this.lblCopyright.Location = new System.Drawing.Point(12, 228);
+            this.lblCopyright.Name = "lblCopyright";
+            this.lblCopyright.Size = new System.Drawing.Size(170, 13);
+            this.lblCopyright.TabIndex = 7;
+            this.lblCopyright.Text = "Created by CyanLabs - Version 1.0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.ClientSize = new System.Drawing.Size(484, 261);
+            this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.lblExclusions);
             this.Controls.Add(this.txtExclusions);
             this.Controls.Add(this.lblPath);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.btnPreview);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(300, 200);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -116,6 +132,8 @@ namespace DeleteAllExceptList
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label lblCopyright;
 
         #endregion
 
